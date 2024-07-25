@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(EducationCenterContext))]
-    [Migration("20240722081849_InitializeEducationCenterDB")]
+    [Migration("20240725184447_InitializeEducationCenterDB")]
     partial class InitializeEducationCenterDB
     {
         /// <inheritdoc />
@@ -78,16 +78,19 @@ namespace DataLayer.Migrations
                         new
                         {
                             Id = 1,
+                            Description = "Administrators have all permissons to manage education center.",
                             Name = "Administrator"
                         },
                         new
                         {
                             Id = 2,
+                            Description = "Teachers view the information of students and their enrollments and grades.",
                             Name = "Teacher"
                         },
                         new
                         {
                             Id = 3,
+                            Description = "Students can enroll subjects for study and manage their own information.",
                             Name = "Student"
                         });
                 });

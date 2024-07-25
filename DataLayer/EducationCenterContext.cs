@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-//using Microsoft.IdentityModel.Protocols;
 using System.Configuration;
 using DataLayer.Entities.Roles;
 using DataLayer.Entities.Students;
@@ -19,9 +18,9 @@ namespace DataLayer
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Role>().HasData(
-                new Role { Id = 1, Name = "Administrator" },
-                new Role { Id = 2, Name = "Teacher" },
-                new Role { Id = 3, Name = "Student" }
+                new Role { Id = 1, Name = "Administrator", Description = "Administrators have all permissons to manage education center." },
+                new Role { Id = 2, Name = "Teacher", Description = "Teachers view the information of students and their enrollments and grades." },
+                new Role { Id = 3, Name = "Student", Description = "Students can enroll subjects for study and manage their own information." }
             );
         }
         public DbSet<Student> Students { get; set; }

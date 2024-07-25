@@ -207,9 +207,9 @@ namespace DataLayer.Migrations
                 columns: new[] { "Id", "Description", "Name" },
                 values: new object[,]
                 {
-                    { 1, null, "Administrator" },
-                    { 2, null, "Teacher" },
-                    { 3, null, "Student" }
+                    { 1, "Administrators have all permissons to manage education center.", "Administrator" },
+                    { 2, "Teachers view the information of students and their enrollments and grades.", "Teacher" },
+                    { 3, "Students can enroll subjects for study and manage their own information.", "Student" }
                 });
 
             migrationBuilder.CreateIndex(
